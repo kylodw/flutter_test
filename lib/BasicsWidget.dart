@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+//基础控件
 class BasicsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
