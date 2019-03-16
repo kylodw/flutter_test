@@ -19,7 +19,14 @@ import 'package:flutter_master_test/ScaffoldRoute.dart';
 import 'package:flutter_master_test/TapboxA.dart';
 import 'package:flutter_master_test/WrapLayout.dart';
 
-void main() => runApp(MyApp());
+void main() =>
+    //在这里添加路由
+runApp(new MaterialApp(
+  home: new MyApp(),
+  routes: <String, WidgetBuilder>{
+    '/a': (BuildContext context) => new ListViewWidget()
+  },
+));
 
 //应用本身也是一个widget
 class MyApp extends StatelessWidget {
@@ -75,7 +82,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.display1,
+              style: Theme
+                  .of(context)
+                  .textTheme
+                  .display1,
             ),
             Text('测试column'),
           ],
