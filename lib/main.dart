@@ -2,16 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_master_test/BasicsWidget.dart';
 import 'package:flutter_master_test/ButtonWidget.dart';
 import 'package:flutter_master_test/CounterWidget.dart';
+import 'package:flutter_master_test/CustomScrollViewTestRoute.dart';
 import 'package:flutter_master_test/EchoRoute.dart';
 import 'package:flutter_master_test/FlexLayoutTestRoute.dart';
 import 'package:flutter_master_test/GridViewWidget.dart';
 import 'package:flutter_master_test/ImageRoute.dart';
+import 'package:flutter_master_test/InfiniteGridView.dart';
 import 'package:flutter_master_test/InfiniteListView.dart';
 import 'package:flutter_master_test/LinearLayoutHorizontal.dart';
 import 'package:flutter_master_test/ListViewWidget.dart';
 import 'package:flutter_master_test/NewRoute.dart';
 import 'package:flutter_master_test/PaddingTestRoute.dart';
 import 'package:flutter_master_test/RandomWordsWidget.dart';
+import 'package:flutter_master_test/SampleAppPage.dart';
 import 'package:flutter_master_test/ScaffoldRoute.dart';
 import 'package:flutter_master_test/TapboxA.dart';
 import 'package:flutter_master_test/WrapLayout.dart';
@@ -53,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
 //      _counter++;
 //    });
     Navigator.push(context, new MaterialPageRoute(builder: (context) {
-      return new GridViewWidget();
+      return new SampleAppPage();
     }));
   }
 
