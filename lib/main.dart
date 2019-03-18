@@ -17,6 +17,7 @@ import 'package:flutter_master_test/RandomWordsWidget.dart';
 import 'package:flutter_master_test/SampleAppPage.dart';
 import 'package:flutter_master_test/ScaffoldRoute.dart';
 import 'package:flutter_master_test/TapboxA.dart';
+import 'package:flutter_master_test/TextFieldWidget.dart';
 import 'package:flutter_master_test/WrapLayout.dart';
 
 void main() =>
@@ -63,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
 //      _counter++;
 //    });
     Navigator.push(context, new MaterialPageRoute(builder: (context) {
-      return new SampleAppPage();
+      return new TextFieldWidget();
     }));
   }
 
