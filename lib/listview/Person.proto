@@ -1,0 +1,30 @@
+package com.kylodw.person;
+
+option java_package = "lib.listview.proto";
+option java_outer_classname = "Person";
+
+message Person {
+    //required该字段必须赋值
+    //optional  可选赋值
+    //repeated  可被重复赋值
+    required string name = 1;
+    required int32 id = 2;
+    optional string email = 3;
+    enum PhoneType {
+        MOBILE = 0;
+        HOME = 1;
+        WORK = 2;
+    }
+    message PhoneNumber {
+        //基本数据类型字段
+        required string number = 1;
+        //枚举类型字段
+        optional PhoneType type = 2 [default = HOME];
+    }
+    //消息类型字段
+    repeated PhoneNumber phone = 4;
+
+}
+message AddressBook {
+    repeated Person person = 1;
+}

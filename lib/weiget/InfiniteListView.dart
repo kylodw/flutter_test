@@ -27,9 +27,6 @@ class _InfiniteListViewState extends State<InfiniteListView> {
       color: Colors.blue,
     );
     return Scaffold(
-      appBar: AppBar(
-        title: Text("底部加载"),
-      ),
       body: Column(
         children: <Widget>[
           ListTile(title: Text("商品列表")),
@@ -78,9 +75,13 @@ class _InfiniteListViewState extends State<InfiniteListView> {
   }
 
   void _initData() {
+    List<String> lists;
     Future.delayed(Duration(seconds: 2)).then((e) {
-      _words.insertAll(_words.length - 1,
-          generateWordPairs().take(20).map((e) => e.asPascalCase).toList());
+      for (int i = 0; i < 20; i++) {
+        lists.add("kylodw$i");
+      }
+      _words.insertAll(0,
+          lists.take(20).toList());
       setState(() {
         //重新构建列表
       });
